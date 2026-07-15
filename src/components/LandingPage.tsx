@@ -329,7 +329,7 @@ export function LandingPage({ onGetStarted, onLogin, isLoggedIn, userDisplayName
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-lg  flex items-center justify-center">
+                <div className="w-8 h-8 rounded-lg  flex items-center justify-center bg-white">
                   <img src={logoSaya} alt="Logo" className="w-8 h-8 object-contain" />
                   </div>
                 <span className="text-lg font-bold text-white">Skillnext</span>
@@ -362,7 +362,7 @@ export function LandingPage({ onGetStarted, onLogin, isLoggedIn, userDisplayName
             </div>
           </div>
           <div className="pt-8 border-t border-white/10 text-center text-sm">
-            <p>&copy; 2025 Skillnext. Semua hak dilindungi.</p>
+            <p>&copy; 2026 Skillnext. Semua hak dilindungi.</p>
           </div>
         </div>
       </footer>
