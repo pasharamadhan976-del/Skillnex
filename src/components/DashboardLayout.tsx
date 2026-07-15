@@ -7,6 +7,7 @@ import { useAuth } from '../lib/auth';
 import { supabase } from '../lib/supabase';
 import { getInitials, timeAgo } from '../lib/helpers';
 import type { Notification } from '../lib/types';
+import logoSaya from '../assets/pp.png';
 
 export type DashboardPage =
   | 'home' | 'cari-talenta' | 'proyek-saya' | 'tawarkan-jasa'
@@ -82,7 +83,9 @@ export function DashboardLayout({ children, currentPage, onNavigate, onOpenChat 
       <aside className={`fixed lg:sticky top-0 left-0 z-50 h-screen w-64 bg-navy-800 text-white flex flex-col transition-transform duration-300 ${sidebarOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}`}>
         <div className="flex items-center justify-between px-6 py-5 border-b border-white/10">
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-emerald-gradient flex items-center justify-center"><Sparkles size={18} className="text-white" /></div>
+            <div className="flex items-center justify-center">
+  <img src={logoSaya} alt="Logo" className="w-8 h-8 object-contain" />
+</div>
             <span className="text-lg font-bold">Skillnex</span>
           </div>
           <button onClick={() => setSidebarOpen(false)} className="lg:hidden text-white/60 hover:text-white"><X size={20} /></button>

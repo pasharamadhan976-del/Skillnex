@@ -102,7 +102,7 @@ export const KATEGORI_SKILLS = [
   'Content Writing', 'Copywriting', 'Digital Marketing', 'Social Media',
   'Video Editing', 'Fotografi', 'Data Entry', 'Translation',
   'Pendidikan', 'Jasa & Keterampilan', 'Event & Hospitality', 'Support & Operasional',
-  'Administrasi', 'Akuntansi', 'Lainnya',
+  'Administrasi', 'Akuntansi', 'Pertanian & Perkebunan', 'Kelautan', 'Lainnya',
 ];
 
 // Mapping spesialis -> kategori induk (for grouping)
@@ -125,6 +125,8 @@ export const SPESIALIS_TO_KATEGORI: Record<string, string> = {
   'Event & Hospitality': 'Event & Hospitality',
   'Support & Operasional': 'Support & Operasional',
   'Administrasi': 'Administrasi & Operasional',
+  'Pertanian & Perkebunan': 'Pertanian & Perkebunan',
+  'Kelautan': 'Kelautan & Perikanan',
   'Lainnya': 'Lainnya',
 };
 

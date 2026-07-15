@@ -8,10 +8,10 @@ interface AuthPageProps {
   mode: 'login' | 'register';
   onBack: () => void;
   onSwitchMode: (mode: 'login' | 'register') => void;
-  onAdminLogin: () => void;
+ 
 }
 
-export function AuthPage({ mode, onBack, onSwitchMode, onAdminLogin }: AuthPageProps) {
+export function AuthPage({ mode, onBack, onSwitchMode }: AuthPageProps) {
   const { signIn, signUp, signInWithGoogle } = useAuth();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -32,7 +32,6 @@ export function AuthPage({ mode, onBack, onSwitchMode, onAdminLogin }: AuthPageP
     if (mode === 'login' && loginRole === 'admin') {
       const result = await signIn(email, password);
       if (result.error) setError(result.error);
-      else onAdminLogin();
     } else {
       const result = mode === 'login' ? await signIn(email, password) : await signUp(email, password, role, layananType);
       if (result.error) setError(result.error);

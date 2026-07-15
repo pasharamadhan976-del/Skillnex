@@ -3,7 +3,6 @@ import { AuthProvider, useAuth } from './lib/auth';
 import { FullPageLoader } from './components/ui';
 import { LandingPage } from './components/LandingPage';
 import { AuthPage } from './components/AuthPage';
-import { AdminLoginPage } from './components/AdminLoginPage';
 import { AdminDashboard } from './components/AdminDashboard';
 import { DashboardLayout, type DashboardPage } from './components/DashboardLayout';
 import { CariTalenta } from './components/CariTalenta';
@@ -18,7 +17,7 @@ import { HomePage } from './components/HomePage';
 import { EarningHub } from './components/EarningHub';
 import { handleOAuthCallback } from './lib/helpers';
 
-type AppView = 'landing' | 'login' | 'register' | 'admin-login' | 'dashboard';
+type AppView = 'landing' | 'login' | 'register' | 'dashboard';
 
 function AppContent() {
   const { user, role, loading, signOut, profileUmkm, profileMahasiswa } = useAuth();
@@ -28,7 +27,7 @@ function AppContent() {
   const [projectPrefill, setProjectPrefill] = useState<{ userId: string; id: string; name: string } | null>(null);
 
   useEffect(() => {
-    if (user && (role === 'umkm' || role === 'mahasiswa')) {
+    if (user && (role === 'umkm' || role === 'mahasiswa' || role === 'admin')) {
       setView('dashboard');
     }
     if (!user && view === 'dashboard') {
@@ -78,9 +77,7 @@ function AppContent() {
     );
   }
 
-  if (view === 'admin-login') {
-    return <AdminLoginPage onBack={() => setView('landing')} />;
-  }
+ 
 
   if (view === 'login' || view === 'register') {
     return (
@@ -88,7 +85,7 @@ function AppContent() {
         mode={view === 'login' ? 'login' : 'register'}
         onBack={() => setView('landing')}
         onSwitchMode={(m) => setView(m)}
-        onAdminLogin={() => setView('admin-login')}
+       
       />
     );
   }

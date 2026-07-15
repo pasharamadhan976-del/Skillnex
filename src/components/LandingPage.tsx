@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import {
-  Sparkles, Search, Shield, Wallet, MessageCircle, Star, ArrowRight,
+  Search, Shield, Wallet, MessageCircle, Star, ArrowRight,
   CheckCircle2, Users, Briefcase, GraduationCap, Zap, TrendingUp, Quote, Menu, X,
 } from 'lucide-react';
 import { Button } from './ui';
 import { KATEGORI_INDUK } from '../lib/types';
+import logoSaya from '../assets/pp.png';
 
 interface LandingPageProps {
   onGetStarted: () => void;
@@ -69,10 +70,10 @@ export function LandingPage({ onGetStarted, onLogin, isLoggedIn, userDisplayName
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-2">
-              <div className="w-9 h-9 rounded-xl bg-emerald-gradient flex items-center justify-center">
-                <Sparkles size={20} className="text-white" />
+              <div className="w-9 h-9 rounded-xl  flex items-center justify-center">
+<img src={logoSaya} alt="Logo" className="w-8 h-8 object-contain" />
               </div>
-              <span className="text-xl font-bold text-navy-800">Skillnex</span>
+              <span className="text-xl font-bold text-navy-800">Skillnext</span>
             </div>
             <div className="hidden md:flex items-center gap-6">
               <a href="#fitur" className="text-sm font-medium text-navy-600 hover:text-emerald-600 transition-colors">Fitur</a>
@@ -213,7 +214,7 @@ export function LandingPage({ onGetStarted, onLogin, isLoggedIn, userDisplayName
       <section id="fitur" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-navy-800 mb-3">Mengapa Skillnex?</h2>
+            <h2 className="text-3xl font-bold text-navy-800 mb-3">Mengapa Skillnext?</h2>
             <p className="text-gray-500 max-w-2xl mx-auto">Platform end-to-end dengan keamanan escrow, chat real-time, dan sistem reputasi yang terpercaya</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -232,7 +233,7 @@ export function LandingPage({ onGetStarted, onLogin, isLoggedIn, userDisplayName
       <section id="cara-kerja" className="py-20 bg-navy-gradient text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-3">Cara Kerja Skillnex</h2>
+            <h2 className="text-3xl font-bold mb-3">Cara Kerja Skillnext</h2>
             <p className="text-white/60 max-w-2xl mx-auto">8 langkah transparan dari registrasi hingga proyek selesai</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -285,7 +286,7 @@ export function LandingPage({ onGetStarted, onLogin, isLoggedIn, userDisplayName
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold text-navy-800 mb-3">Apa Kata UMKM?</h2>
-            <p className="text-gray-500">Cerita nyata dari mitra UMKM yang sudah merasakan Skillnex</p>
+            <p className="text-gray-500">Cerita nyata dari mitra UMKM yang sudah merasakan Skillnext</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             {testimonials.map((t, i) => (
@@ -328,8 +329,10 @@ export function LandingPage({ onGetStarted, onLogin, isLoggedIn, userDisplayName
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             <div>
               <div className="flex items-center gap-2 mb-4">
-                <div className="w-8 h-8 rounded-lg bg-emerald-gradient flex items-center justify-center"><Sparkles size={16} className="text-white" /></div>
-                <span className="text-lg font-bold text-white">Skillnex</span>
+                <div className="w-8 h-8 rounded-lg  flex items-center justify-center">
+                  <img src={logoSaya} alt="Logo" className="w-8 h-8 object-contain" />
+                  </div>
+                <span className="text-lg font-bold text-white">Skillnext</span>
               </div>
               <p className="text-sm">Marketplace talenta yang menghubungkan UMKM dengan mahasiswa secara aman dan profesional.</p>
             </div>
@@ -359,7 +362,7 @@ export function LandingPage({ onGetStarted, onLogin, isLoggedIn, userDisplayName
             </div>
           </div>
           <div className="pt-8 border-t border-white/10 text-center text-sm">
-            <p>&copy; 2025 Skillnex. Semua hak dilindungi.</p>
+            <p>&copy; 2025 Skillnext. Semua hak dilindungi.</p>
           </div>
         </div>
       </footer>
